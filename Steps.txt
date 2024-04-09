@@ -1,0 +1,35 @@
+mkdir node1
+mkdir node2
+
+cd node1
+    geth --datadir "./data" account new
+    Enter your password
+    Confirm Your password
+
+cd ..
+
+cd node2
+    geth --datadir "./data" account new
+    Enter your password
+    Confirm Your password
+
+Successfully created a account
+
+For Genesis Block
+
+cd .. if you are in any node folder
+    puppeth
+    ans all add nodes and etc
+
+Genesis.json mustbe in home directory
+ cd node1
+    geth --datadir ./data init ../genesis.json
+
+  
+Create a bootnode 
+    creating a boot node 
+    generate key :bootnode -genkey boot.key
+    enode generate: bootnode -nodekey boot.key
+
+    run bootnode: bootnode -nodekey "./boot.key" -verbosity 7 -addr "127.0.0.1:30301"
+

@@ -1,0 +1,15 @@
+Node 1:
+ Add:"0x02Ac2C5601EA687d15B3736688d97d8eFadF42B3"
+ pass: 12345678
+ run: geth --networkid 9234 --datadir "./data" --bootnodes enode://013d7f69baec54e1d86aa3a45bd3caf9bd7ad5cddc39c853e3d140d1a55b3ad5dd92d3f9a1f803d5054bf30980d5c35e3df582946d2b52ec4c70a44b12ea371c@127.0.0.1:30301 --port 30303 --syncmode full --http --allow-insecure-unlock --http.corsdomain "*" --http.port 8545 --unlock 0x02Ac2C5601EA687d15B3736688d97d8eFadF42B3 --password password.txt --mine console
+
+Node 2: 
+    Add: "0xB173414130589e86C9541A51e33b4Bc6a76AAa37"
+    pass:12345678
+    run: geth --networkid 9234 --datadir "./data" 
+--bootnodes enode://013d7f69baec54e1d86aa3a45bd3caf9bd7ad5cddc39c853e3d140d1a55b3ad5dd92d3f9a1f803d5054bf30980d5c35e3df582946d2b52ec4c70a44b12ea371c@127.0.0.1:30301 --port 30304 --syncmode full --http --allow-insecure-unlock --http.corsdomain "*" --http.port 8546 --unlock 0xB173414130589e86C9541A51e33b4Bc6a76AAa37 --password password.txt console --ipcdisable
+
+Bootnode: 
+    enode://013d7f69baec54e1d86aa3a45bd3caf9bd7ad5cddc39c853e3d140d1a55b3ad5dd92d3f9a1f803d5054bf30980d5c35e3df582946d2b52ec4c70a44b12ea371c@127.0.0.1:0?discport=30301
+
+    bootnode -nodekey "./boot.key" -verbosity 7 -addr "127.0.0.1:30301"
